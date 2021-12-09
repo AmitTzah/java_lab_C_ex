@@ -14,7 +14,7 @@ public class ComplexNumber {
 
     }
 
-    //Methods
+    //Public Methods
 
     public ComplexNumber plus(ComplexNumber other) {
         return new ComplexNumber(real + other.real, imaginary + other.imaginary);
@@ -36,17 +36,17 @@ public class ComplexNumber {
         return fromPolarCoordinates(new_radius, new_argument);
     }
 
-    private static ComplexNumber fromPolarCoordinates(double radius, double argument) {
-        return new ComplexNumber(radius*Math.cos(argument), radius*Math.sin(argument));
-    }
 
     public double getRealPart() {
         return real;
     }
 
+    public void setReal(double realPart) {real=realPart;}
+
     public double getImaginaryPart() {
         return imaginary;
     }
+    public void setImaginary(double imaginaryPart) {imaginary=imaginaryPart;}
 
     public double getRadius() {
         return Math.sqrt(Math.pow(real, 2) + Math.pow(imaginary, 2));
@@ -61,6 +61,13 @@ public class ComplexNumber {
         return this.minus(other).getRadius() < epsilon.getRadius();
 
     }
+
+    //private methods
+
+    private static ComplexNumber fromPolarCoordinates(double radius, double argument) {
+        return new ComplexNumber(radius*Math.cos(argument), radius*Math.sin(argument));
+    }
+
 
 
 }
