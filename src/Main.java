@@ -27,6 +27,5 @@ public class Main {
         assert almostEquals(z1.divide(z2).getArgument(), z1.getArgument() - z2.getArgument());
 
 
-
     }
 }
