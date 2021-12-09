@@ -4,7 +4,7 @@ public class ComplexNumber {
 
     private double real;
     private double  imaginary;
-    public static final ComplexNumber epsilon = new ComplexNumber(0.001, 0);
+    public static ComplexNumber epsilon = new ComplexNumber(0.001, 0);
 
     //Constructor
 
@@ -36,7 +36,7 @@ public class ComplexNumber {
         return fromPolarCoordinates(new_radius, new_argument);
     }
 
-    public static ComplexNumber fromPolarCoordinates(double radius, double argument) {
+    private static ComplexNumber fromPolarCoordinates(double radius, double argument) {
         return new ComplexNumber(radius*Math.cos(argument), radius*Math.sin(argument));
     }
 
