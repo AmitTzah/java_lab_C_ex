@@ -1,4 +1,3 @@
-
 public class Main {
     private static final double EPSILON = 0.001;
 
